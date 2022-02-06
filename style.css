@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+.box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgrey;
+}
+.content{
+    background: darkorange;
+    width: 30%;
+    height: 65vh;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+}
+.loader{
+    background: darkorange;
+    width: 30%;
+    height: 65vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.loader>.span{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    background: #777;
+}
+.span::after{
+    position: absolute;
+    content: '';
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-bottom: 5px solid #555;
+    border-top: 5px solid #555;
+    animation: loader1 3s ease alternate;
+}
+.span::before{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-left: 5px solid #555;
+    border-right: 5px solid #555;
+    animation: loader2 7s ease alternate;
+
+}
+@keyframes loader1{
+    0%{
+        transform: rotate(1080deg);
+    }
+    100%{
+        transform: rotate(-1080deg);
+    }
+}
+@keyframes loader2{
+    0%{
+        transform: rotate(-1080deg);
+    }
+    100%{
+        transform: rotate(1080deg);
+    }
+}
+.content>h1{
+    font-style: italic;
+    font-size: 5rem;
+    color: dimgrey;
+    text-align: center;
+}
+.content>.item{
+    width: 90%;
+    margin: 0 auto;
+    height: 15%;
+    border-radius: 10px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+
+}
+span{
+    width: 45%;
+    margin: auto;
+    height: 90%;
+    background: rgb(81, 248, 226);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 3rem;
+    cursor: pointer;
+    letter-spacing: 5px;
+}
+#start{
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+
+}
+.content .item{
+    display: none;
+}
+.error{
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+.error1{
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
